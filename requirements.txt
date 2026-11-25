@@ -1,0 +1,36 @@
+# vod2uv_mpi -- Python dependencies
+#
+# mpi4py MUST be compiled against the system MPI (Cray MPICH on OLCF), so it is
+# forced to build from source. Load the compiler/MPI modules first and set MPICC:
+#
+#   Andes:    module load gcc
+#             python3 -m venv ~/venvs/vod2uv && source ~/venvs/vod2uv/bin/activate
+#             MPICC="mpicc -shared" pip install --no-cache-dir -r requirements.txt
+#
+#   Frontier: module load PrgEnv-gnu cray-python ; module unload rocm
+#             python3 -m venv ~/venvs/vod2uv && source ~/venvs/vod2uv/bin/activate
+#             MPICC="cc -shared" pip install --no-cache-dir -r requirements.txt
+#
+# Verify:  python -c "import mpi4py; print(mpi4py.get_config())"   (should show the Cray/system mpicc)
+
+--no-binary mpi4py
+
+numpy>=1.20         # FFT, recurrence, batched matmul (tested: 2.5.3)
+mpi4py>=3.1         # MPI_Alltoallv / Send / Recv  (built from source, see above)
+netCDF4>=1.6        # read/write the N8000 files; serial build is sufficient (wheel bundles HDF5/netCDF-C)
+
+# --- only needed for the test suite (tests/) ---
+scipy>=1.15         # scipy.io netCDF-3 test files; sph_harm_y_all in test_random_scipy.py (tested: 1.18.1)
+
+# --- ERA5 download and GRIB I/O (XNR1K validation) ---
+cdsapi>=0.7         # new CDS API (cds.climate.copernicus.eu/api)
+eccodes>=2.37       # Python bindings; recent wheels bundle the ecCodes C library
+
+# --- ARCO-ERA5 fetch (login node only) ---
+xarray
+zarr
+gcsfs
+
+# --- figures ---
+matplotlib>=3.5
+# cartopy           # optional, for --coastlines (needs Natural Earth data)

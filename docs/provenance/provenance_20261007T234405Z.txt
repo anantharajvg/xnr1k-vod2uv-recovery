@@ -1,0 +1,120 @@
+# vod2uv.recovery provenance manifest
+written_utc: 2026-10-07T23:44:05Z
+host: andes31.olcf.ornl.gov
+working_dir: /lustre/orion/cli900/world-shared/projects/XNR1K/audit/zonalmean/vod2uv.recovery
+
+## modules
+  Core/24.00
+  hsi/5.0.2.p5
+  DefApps
+  cdo/1.9.10
+  gcc/9.3.0
+  openmpi/4.0.4
+  netcdf-c/4.7.4
+  miniforge3/24.11.3-2
+
+## python
+  python 3.12.9 /lustre/orion/cli900/world-shared/projects/XNR1K/audit/zonalmean/vod2uv/.venv/bin/python3
+  numpy      2.5.3
+  scipy      1.18.1
+  mpi4py     4.1.2
+  netCDF4    1.7.4
+  eccodes    2.49.0 (library 2.49.0)
+  matplotlib 3.11.2
+  xarray     2026.9.0
+  zarr       3.4.0
+  gcsfs      2026.10.0
+  cdsapi     None
+  mpi4py links: libmpi.so.40 => /sw/andes/spack-envs/base/opt/linux-rhel8-x86_64/gcc-9.3.0/openmpi-4.0.4-skxqfeiocc5jtuw3y6dwtnxzzqjp5ffs/lib/libmpi.so.40 (0x00007f6594f69000)
+  mpi4py links: libopen-rte.so.40 => /sw/andes/spack-envs/base/opt/linux-rhel8-x86_64/gcc-9.3.0/openmpi-4.0.4-skxqfeiocc5jtuw3y6dwtnxzzqjp5ffs/lib/libopen-rte.so.40 (0x00007f6593821000)
+  mpi4py links: libopen-pal.so.40 => /sw/andes/spack-envs/base/opt/linux-rhel8-x86_64/gcc-9.3.0/openmpi-4.0.4-skxqfeiocc5jtuw3y6dwtnxzzqjp5ffs/lib/libopen-pal.so.40 (0x00007f65933b0000)
+
+## code and documents (md5)
+  8dc765c7ce52b2fdbf033bf707aeaed8  ./analysis/check_recovered.py
+  2cdbe287290b2ffb14a5ef68d918c712  ./analysis/m2_diag.py
+  ff04bc29c486377313516c0eca895385  ./analysis/m2_era5.py
+  c32ba8c547ebf4db9712ef1c2f716c6e  ./analysis/m3_reduced.py
+  e31dc3abde1f11b4c83d2b8cb4e8faaf  ./analysis/zonal_ratio_check.py
+  f28801aee60551c0381947fc35a34e9b  ./docs/findings-2026-10-07.md
+  a19c6001876e9479a665d62723a91ead  ./docs/runbook-andes-phase1.md
+  7186c5e9f005c974371880a9b2fcbdb2  ./docs/vod2uv_mpi_README.md
+  40693f153f60e1867387b6b797ea165d  ./docs/worklog-2026-10-07.md
+  f13e4fc720c36956e6f32bf453ae39fe  ./era5/download_era5.py
+  baebb53b1473de227da61db2e4196de3  ./era5/fetch_arco.py
+  5891fc74728aa5215310c777855447c5  ./README.md
+  fac915f76ed9a68d92271c5127559b83  ./recover/comm.py
+  9d32dfd6add1f28a710f4697baac5661  ./recover/compare.py
+  893d2f98f9abfb6992340f316a6c2d5a  ./recover/core.py
+  f3e5e2d6d1ee847de12a7e4fbec20233  ./recover/gribio.py
+  fa2b65f39be27a3f2191421641d036ac  ./recover/plots.py
+  a7995c26834926e11cc25de984cdfa23  ./recover/README.md
+  c797ebd3ad19b5add68d50c814dcff25  ./recover/recover_uv.py
+  bf8ed269193f9d89931456d760237d57  ./recover/serial.py
+  decfe6b52625a666955842fb72b7cc3e  ./recover/tests/grib_selftest.py
+  259ca89c1fdb3aa2f1ed470491fd80e9  ./recover/tests/selftest_grib.sh
+  a6639f2d5afd60506268cc1c7033fc05  ./recover/tests/test_m1_analytic.py
+  e7e3d060c02aa688d17dcdcbee20a1c8  ./recover/tests/test_m7_driver.py
+  bb73cfa68b8793e5a56e41c5b9cc8967  ./recover/tests/test_outputs.py
+  17b8e784015828a95cbac8b99ae3a986  ./recover/tests/test_plots.py
+  b84f013368f3d4c247d5533921a680dd  ./recover/tests/test_unit.py
+  3dbb6f74b5d99cd75ba282af4b57296f  ./requirements.txt
+  3627af6decae27cbc85cb2245416e597  ./results/m2_all.csv
+  2206e5d3903465e164a10f472b34fede  ./results/m2_all.txt
+  a80e3bc2b32ce2a6887420408baff57c  ./results/m2_diag_levels.txt
+  cf8d852e42c25f7a9dbe3d607f0b57b7  ./results/m2_L074.csv
+  48aa5eacb5d391e7e303ebeeb4df1d6e  ./results/m2_L074.txt
+  ca1da018279fd191aa53573cd4597d32  ./results/m2_L125-137.csv
+  abb5e003efa7b797a3c36383cd8c1fe6  ./results/m2_L125-137.txt
+  60cad96981ded4b25abf46e44a97563b  ./results/m3_all.csv
+  28124a479f87af52fa852a2b6bdd7b2c  ./results/m3_all.txt
+  b5946f7c9cc2c4001362ee412097ac28  ./run_L074/check.txt
+  d295cf34f0db9ff5fc8db14d93605f4f  ./run_L074/level_stats.csv
+  9dd9929ed0857fb898317ca5dbcaceb0  ./run_L074/log.txt
+  24353dab081dd744b37023e255408ad0  ./run_L074.nohup.txt
+  22167317d37c2b821c065933a2aef74e  ./run_L074/run_info.txt
+  0c8c063a0d83c1ac1a396fa7fb0a2acd  ./scripts/provenance.sh
+  8101b74bc1e1e27c7fec5967218654ee  ./scripts/run_L074.sh
+  5c4b096f402f39998ae929df01905913  ./scripts/sync_globus.sh
+  19942073721c66000000803e51b9f67f  ./tests/bench_T7999.py
+  6cb8551018b5e900ab608b15e58bf08d  ./tests/check_fd.py
+  11260e3b999553dacb74edfa5302743d  ./tests/check_output.py
+  cb0762b21715d109a64e8442642aa3de  ./tests/fakempi.py
+  5000e3ead0fce1f80fdf886f5b5c449f  ./tests/make_testfile.py
+  6911c4669436ccf523bf0bafce11f7a0  ./tests/selftest_mpi.sh
+  dbd666af68cc17bb959eb69e202a5d13  ./tests/test_core.py
+  9674ef8f1b43b96f1cdb7c48a84578c5  ./tests/test_ortho_T7999.py
+  a0a115b4dad6f06b2363c865994cbd20  ./tests/test_pipeline.py
+  8b3da912a75e5d4b3ce0c6d9dc3ef6aa  ./tests/test_random_scipy.py
+  04d73a76d11976949a00a65c716a3139  ./vod2uv_mpi.py
+
+## ERA5 data (md5, bytes, mtime)
+  8ec6216d6338deea259e2da8ec179c53  449665120  2026-10-07 15:12:25.000000000 -0400  /lustre/orion/cli900/world-shared/projects/XNR1K/audit/zonalmean/vod2uv.recovery/data/era5/era5_arco_sh_vo_d_2018110100.npz
+  61cb08e1edd53d2df5f5e89a170334b0  898555600  2026-10-07 15:18:40.000000000 -0400  /lustre/orion/cli900/world-shared/projects/XNR1K/audit/zonalmean/vod2uv.recovery/data/era5/era5_ml_F320_vo_d_u_v.grib
+
+## XNR1K inputs, step 000000 (read-only)
+  (not hashed; use --hash-inputs)  70227474648  2026-06-22 23:26:37.000000000 -0400  /lustre/orion/cli900/world-shared/projects/XNR1K/data/h3f7-ndjf/global/O8000/ml-dgg/u/u_131_h3f7-ndjf_000000.ml-dgg.O8000.global.grib
+  (not hashed; use --hash-inputs)  70227474648  2026-06-22 23:27:00.000000000 -0400  /lustre/orion/cli900/world-shared/projects/XNR1K/data/h3f7-ndjf/global/O8000/ml-dgg/v/v_132_h3f7-ndjf_000000.ml-dgg.O8000.global.grib
+  (not hashed; use --hash-inputs)  70227474648  2026-06-22 23:27:45.000000000 -0400  /lustre/orion/cli900/world-shared/projects/XNR1K/data/h3f7-ndjf/global/O8000/ml-dgg/vo/vo_138_h3f7-ndjf_000000.ml-dgg.O8000.global.grib
+  (not hashed; use --hash-inputs)  70227474648  2026-06-22 23:26:15.000000000 -0400  /lustre/orion/cli900/world-shared/projects/XNR1K/data/h3f7-ndjf/global/O8000/ml-dgg/d/d_155_h3f7-ndjf_000000.ml-dgg.O8000.global.grib
+
+## results and run outputs (md5, bytes)
+  23951363dcd8c80edbaee8bb12c36b05  85288  results/figures/rowlimits_O8000.png
+  d41d8cd98f00b204e9800998ecf8427e  0  results/.gitkeep
+  3627af6decae27cbc85cb2245416e597  231901  results/m2_all.csv
+  2206e5d3903465e164a10f472b34fede  242648  results/m2_all.txt
+  a80e3bc2b32ce2a6887420408baff57c  24243  results/m2_diag_levels.txt
+  cf8d852e42c25f7a9dbe3d607f0b57b7  1889  results/m2_L074.csv
+  48aa5eacb5d391e7e303ebeeb4df1d6e  1983  results/m2_L074.txt
+  ca1da018279fd191aa53573cd4597d32  28732  results/m2_L125-137.csv
+  abb5e003efa7b797a3c36383cd8c1fe6  30739  results/m2_L125-137.txt
+  60cad96981ded4b25abf46e44a97563b  20340  results/m3_all.csv
+  28124a479f87af52fa852a2b6bdd7b2c  30806  results/m3_all.txt
+  b5946f7c9cc2c4001362ee412097ac28  1744  run_L074/check.txt
+  d295cf34f0db9ff5fc8db14d93605f4f  242  run_L074/level_stats.csv
+  9dd9929ed0857fb898317ca5dbcaceb0  652  run_L074/log.txt
+  24353dab081dd744b37023e255408ad0  1153  run_L074.nohup.txt
+  9a024383b124a0962f317a709a656b50  512609304  run_L074/parts/u_L074.grib
+  3b316c734dd441602abb7631d79d54b2  512609304  run_L074/parts/v_L074.grib
+  22167317d37c2b821c065933a2aef74e  1469  run_L074/run_info.txt
+  9a024383b124a0962f317a709a656b50  512609304  run_L074/u_131_h3f7-ndjf_000000.ml-dgg.O8000.global.recovered.L074.grib
+  3b316c734dd441602abb7631d79d54b2  512609304  run_L074/v_132_h3f7-ndjf_000000.ml-dgg.O8000.global.recovered.L074.grib

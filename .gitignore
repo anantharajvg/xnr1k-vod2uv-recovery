@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.DS_Store
+*.part
+*.tmp
+venv/
+# data are not part of the repository
+*.grib
+*.grb
+*.nc
+*.npz
